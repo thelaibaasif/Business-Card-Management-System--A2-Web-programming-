@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Manager</title>
+    <link rel="stylesheet" href="21i2560_A2.css">
+</head>
+<body>
+    <header>
+        <h1>Card Manager</h1>
+    </header>
+    <div class="container">
+        <section id="add-card">
+            <h2>Add Card Information</h2>
+            <!-- Form to add card information -->
+            <form id="card-form">
+                <label for="date">Date:</label>
+                <input type="date" id="date" required>
+                <label for="time">Time:</label>
+                <input type="time" id="time" required>
+                <label for="title">Title:</label>
+                <input type="text" id="title" required>
+                <label for="description">Description:</label>
+                <textarea id="description" rows="4" required></textarea>
+                <label for="event">Event:</label>
+                <input type="text" id="event" required>
+                <label for="nearest-place">Nearest Place:</label>
+                <input type="text" id="nearest-place" required>
+                <label for="image">Upload Image:</label>
+                <input type="file" id="image">
+                <button type="submit" onclick="addCard(event)">Add Card</button>
+            </form>
+        </section>
+        <section id="search">
+            <h2>Search and Filter</h2>
+            <input type="text" id="search-input" placeholder="Search...">
+            <!-- Filter options -->
+            <select id="filter-options">
+                <option value="date">Date</option>
+                <option value="time">Time</option>
+                <option value="title">Title</option>
+                <option value="event">Event</option>
+                <!-- Add more filter options as necessary -->
+            </select>
+            <button onclick="searchCards()">Search</button>
+            <!-- Display search results here -->
+            <div id="search-results"></div>
+            <button onclick="deleteAllCards()">Delete All</button>
+        </section>
+        <section id="theme-options">
+            <h2>Theme Options</h2>
+            <!-- Theme selection dropdown -->
+            <select id="theme-select">
+                <option value="default">Default</option>
+                <option value="cool">Cool</option>
+                <option value="sad">Sad</option>
+                <option value="funny">Funny</option>
+                <!-- Add more theme options as necessary -->
+            </select>
+            <!-- Theme customization options -->
+            <div id="theme-customization">
+                <label for="font-name">Font Name:</label>
+                <input type="text" id="font-name">
+                <label for="font-style">Font Style:</label>
+                <select id="font-style">
+                    <option value="normal">Normal</option>
+                    <option value="italic">Italic</option>
+                    <option value="bold">Bold</option>
+                    <!-- Add more font style options as necessary -->
+                </select>
+                <label for="font-color">Font Color:</label>
+                <input type="color" id="font-color">
+                <label for="body-color">Body Color:</label>
+                <input type="color" id="body-color">
+                <label for="background-color">Background Color:</label>
+                <input type="color" id="background-color">
+                <!-- Add more theme customization options as necessary -->
+            </div>
+            <button onclick="applyTheme()">Apply Theme</button>
+            <button onclick="addNewTheme()">Add New Theme</button>
+        </section>
+        <section id="bonus-features">
+            <h2>Bonus Features</h2>
+            <button onclick="fetchExternalData()">Fetch External Data</button>
+            <button onclick="shareOnSocialMedia()">Share on Social Media</button>
+            <button onclick="setReminder()">Set Reminder</button>
+            <button onclick="exportToPDF()">Export to PDF</button>
+            <button onclick="exportToExcel()">Export to Excel</button>
+            <button id="voice-command">Voice Command</button>
+        </section>
+    </div>
+    <script src="21i2560_A2.js"></script>
+</body>
+</html>
